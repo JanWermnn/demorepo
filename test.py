@@ -1,7 +1,5 @@
-print("    /|")
-print("   / |")
-print("  /  |")
-print(" /   |")
-print("|____|")
-print("TestLine")
-print("AnotherTestLine")
+import  datetime
+
+x = datetime.datetime.now()
+
+print(x)
