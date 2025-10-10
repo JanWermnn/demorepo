@@ -5,10 +5,10 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from getpass import getpass
-"""
+
 username = input("Benutzer: ")
 password = getpass("Passwort: ")
-"""
+
 
 BetSys = os.name  
 print("Betriebssystem:", BetSys)
