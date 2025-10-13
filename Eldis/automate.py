@@ -6,15 +6,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from getpass import getpass
 from bs4 import BeautifulSoup
-""""
+
 username = input("Benutzer: ")
 password = getpass("Passwort: ")
-"""
+
 
 BetSys = os.name  
 print("Betriebssystem:", BetSys)
+if BetSys == "nt":  # Windows
+    service = Service(executable_path=r"D:\DEV\Selenium\Drivers\chromedriver-win64\chromedriver.exe")
+else:  # macOS
+    service = Service(executable_path=r"/Users/janw/dev/chromedriver-mac-arm64/chromedriver")
 
-service = Service(executable_path=r"D:\DEV\Selenium\Drivers\chromedriver-win64\chromedriver.exe")
 driver = webdriver.Chrome(service=service)
 
 driver.get("https://einsatznachbearbeitung.bayern.de/login")
