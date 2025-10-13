@@ -19,6 +19,7 @@ else:  # macOS
     service = Service(executable_path=r"/Users/janw/dev/chromedriver-mac-arm64/chromedriver")
 
 driver = webdriver.Chrome(service=service)
+driver.maximize_window()
 
 driver.get("https://einsatznachbearbeitung.bayern.de/login")
 time.sleep(1)
@@ -36,26 +37,21 @@ driver.find_element(By.XPATH, '//*[@id="page-length-100"]').click() #Klicken auf
 time.sleep(3)
 """
 schlagwort_zellen = driver.find_elements(By.CSS_SELECTOR, '[data-cell-field="schlagwort"]')
-print(type(schlagwort_zellen))
+
 
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
 
 table1 = soup.find("table",{"class":"data-table"})
-"print(table1.prettify())"
 table2 = soup.find('tbody')
-"print(table2.prettify())"
 table3 = soup.find_all('tr')
-print(type(table3))
 t = 1
 einsaetze = []
 for td in table3:
-    print(type(td))
-    for i, value in enumerate(td):
-        print(i)
-    einsaetze.append(td.text)
+    print(td.prettify())
+    einsaetze.append(td.get_text())
 for item in einsaetze:
-    "print(t, item)"
+    print(t, item)
     t += 1
 """
 # Die Texte extrahieren und in eine Liste schreiben
