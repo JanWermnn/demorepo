@@ -10,8 +10,6 @@ from bs4 import BeautifulSoup
 username = input("Benutzer: ")
 password = getpass("Passwort: ")
 """
-username = ("Werthmann.Jan.433")
-password = ("Iwisbl$FFW112")
 
 BetSys = os.name  
 print("Betriebssystem:", BetSys)
@@ -20,7 +18,6 @@ service = Service(executable_path=r"D:\DEV\Selenium\Drivers\chromedriver-win64\c
 driver = webdriver.Chrome(service=service)
 
 driver.get("https://einsatznachbearbeitung.bayern.de/login")
-
 time.sleep(1)
 
 driver.find_element("id", "username").send_keys(username)
