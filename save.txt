@@ -1,0 +1,23 @@
+    itemsfound = soup.find_all("div",{"class":"truncate no-wrap data-table-padding-fix"})
+    einsatz = []
+    for item in itemsfound:
+        einsatz.append(item.text)
+    print(i,einsatz)
+    del einsatz 
+    i += 1
+
+    for td in table3:
+    for i, value in enumerate(td):
+        print(i, value)
+    einsaetze.append(td.text)
+for item in einsaetze:
+    "print(t, item)"
+    t += 1
+
+    print(i, value.prettify())
+        nummer = td[0]
+    intnummer = td[1]
+    datum = td[3]
+    stichwort = td[6]
+    print(nummer.text, intnummer.text, datum.text, stichwort.text)
+    print(td.text[1])

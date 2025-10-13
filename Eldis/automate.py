@@ -10,6 +10,8 @@ from bs4 import BeautifulSoup
 username = input("Benutzer: ")
 password = getpass("Passwort: ")
 """
+username = ("Werthmann.Jan.433")
+password = ("Iwisbl$FFW112")
 
 BetSys = os.name  
 print("Betriebssystem:", BetSys)
@@ -34,6 +36,7 @@ driver.find_element(By.XPATH, '//*[@id="page-length-100"]').click() #Klicken auf
 time.sleep(3)
 """
 schlagwort_zellen = driver.find_elements(By.CSS_SELECTOR, '[data-cell-field="schlagwort"]')
+print(type(schlagwort_zellen))
 
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')

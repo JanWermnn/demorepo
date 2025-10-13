@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feuerwehr Einsatz/Übung Erfassung</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Feuerwehr Einsatz/Übung eintragen</h1>
+  </header>
+
+  <main>
+    <form id="form-entry">
+      <label for="type">Typ:</label>
+      <select id="type" name="type" required>
+        <option value="">Bitte auswählen</option>
+        <option value="Einsatz">Einsatz</option>
+        <option value="Übung">Übung</option>
+      </select>
+
+      <label for="date">Datum:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="title">Titel:</label>
+      <input type="text" id="title" name="title" placeholder="Kurzbeschreibung" required>
+
+      <label for="details">Details:</label>
+      <textarea id="details" name="details" rows="4" placeholder="Beschreibung..." required></textarea>
+
+      <button type="submit">Absenden</button>
+    </form>
+
+    <div id="message"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
